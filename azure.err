@@ -1,24 +1,13 @@
-Wed Oct 08 2014 14:53:31 GMT-0700 (PDT):
-{ [Error: Error: Website with given name shortly already exists.]
-  stack: [Getter/Setter],
-  __frame: 
-   { name: 'createSite',
-     line: 389,
-     file: '/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/asm/site._js',
-     prev: 
-      { name: '__4',
-        line: 206,
-        file: '/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/asm/site._js',
-        prev: undefined,
-        active: false,
-        offset: 50,
-        col: 12 },
-     active: false,
-     offset: 20,
-     col: 21 },
-  rawStack: [Getter] }
-Error: Error: Website with given name shortly already exists.
-    at createSite__4 (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:312:34)
-    at createSite (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/asm/site._js:409:21)
-    at __4 (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/asm/site._js:256:12)
-
+Thu Oct 09 2014 10:22:13 GMT-0700 (PDT):
+{ [Error: Cannot find module '../../commands/websites/websitesclient'] code: 'MODULE_NOT_FOUND' }
+Error: Cannot find module '../../commands/websites/websitesclient'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/util/git/linkedrevisioncontrol._js:25:22)
+    at Module._compile (module.js:456:26)
+    at Module.pModule._compile (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/node_modules/streamline/lib/compiler/register.js:44:15)
+    at Object.streamliners._js [as ._js] (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/node_modules/streamline/lib/compiler/underscored.js:28:11)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
