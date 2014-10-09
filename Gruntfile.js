@@ -90,9 +90,6 @@ module.exports = function(grunt) {
     shell: {
       prodServer: {
         command: 'git push azure master'
-      },
-      browse: {
-        command: 'azure site browse'
       }
     },
   });
