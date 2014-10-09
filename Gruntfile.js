@@ -5,12 +5,26 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          './public/lib/*.js',
-          './public/client/*.js'// All JS in the libs folder
+          // './public/lib/*.js',libraries
+          './public/client/app.js',// All JS in the libs folder
+          './public/client/link.js',// All JS in the libs folder
+          './public/client/links.js',// All JS in the libs folder
+          './public/client/linkView.js',// All JS in the libs folder
+          './public/client/linksView.js',// All JS in the libs folder
+          './public/client/createLinkView.js',// All JS in the libs folder
+          './public/client/router.js'// All JS in the libs folder
         ],
-        dest: './build/production.js'
-      }
-
+        dest: './public/dist/production.js'
+      },
+      libs: {
+        src: [
+          './public/lib/underscore.js',
+          './public/lib/jquery.js',
+          './public/lib/backbone.js',
+          './public/lib/handlebars.js'
+        ],
+        dest: './public/dist/libraries.js'
+      },
     },
 
     mochaTest: {
