@@ -43,9 +43,13 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      build: {
-        src: './build/production.js',
-        dest: './build/production.min.js'
+      dist: {
+        src: './public/dist/production.js',
+        dest: './public/dist/production.min.js'
+      },
+      libs: {
+        src: './public/dist/libraries.js',
+        dest: './public/dist/libraries.min.js'
       }
     },
 
@@ -54,7 +58,7 @@ module.exports = function(grunt) {
         'public/client/*.js'
       ],
       options: {
-        force: 'true',
+        force: 'false',
         jshintrc: '.jshintrc',
         ignores: [
           'public/lib/**/*.js',
