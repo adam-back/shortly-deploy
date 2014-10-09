@@ -89,6 +89,10 @@ module.exports = function(grunt) {
 
     shell: {
       prodServer: {
+        command: 'git push azure master'
+      },
+      browse: {
+        command: 'azure site browse'
       }
     },
   });
@@ -123,13 +127,16 @@ module.exports = function(grunt) {
     'mochaTest'
   ]);
 
-  grunt.registerTask('build', ['jshint', "mochaTest", 'concat', 'uglify'
-  ]);
+  grunt.registerTask('build', ['jshint', "mochaTest", 'concat', 'uglify']);
 
   grunt.registerTask('deploy', function(n) {
+
     if(grunt.option('prod')) {
+      grunt.task.run(['build']);
+      grunt.task.run(['shell']);
       // add your production server task here
     } else {
+      grunt.task.run(['build']);
       grunt.task.run([ 'server-dev' ]);
     }
   });
